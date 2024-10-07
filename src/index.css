@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  height: 100%;
+  margin: 0;
+}
+.container{
+  background-image: url(/images/abstract-uv-ultraviolet-light-composition.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  background-attachment: fixed;
+  height: 100vh; 
+  min-width: 100vw;
+
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  z-index: 1000;
+}
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none; /* Prevents from blocking other UI elements */
+
+
+}
+
+.error {
+  /* background-color: rgba(255, 0, 0, 0.8); */
+
+  padding: 1rem 2rem;
+  border-radius: 8px;
+
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: all; /* Enables interaction with the error message if needed */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.home-container {
+  background-color: #fef3c7; /* Light yellow background */
+}
+
+.bg-blue-100 {
+  background-color: brown; /* Light blue background for student results */
+}
+
+.bg-green-100 {
+  background-color: brown; /* Light green background for admin panel */
+}
